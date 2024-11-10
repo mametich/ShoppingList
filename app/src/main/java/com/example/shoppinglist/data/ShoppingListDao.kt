@@ -18,5 +18,4 @@ interface ShoppingListDao {
 
     @Query("SELECT * FROM shopping_list_name")
     fun getAllItems() : Flow<List<ShoppingListItem>>
-
 }
