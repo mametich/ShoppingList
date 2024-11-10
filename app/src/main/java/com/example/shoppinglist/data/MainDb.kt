@@ -10,5 +10,7 @@ import androidx.room.RoomDatabase
 abstract class MainDb : RoomDatabase() {
 
     abstract val shoppingListDao: ShoppingListDao
+    abstract val noteDao: NoteDao
+    abstract val addItemDao: AddItemDao
 
 }
