@@ -10,6 +10,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.example.shoppinglist.main_screen.MainScreen
 import com.example.shoppinglist.ui.theme.ShoppingListTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,8 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ShoppingListTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                   MainScreen(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -31,10 +31,3 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
